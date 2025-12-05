@@ -4,6 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+    // ✅ 1. Correct: Sets the base URL for built assets (JS/CSS)
     base: '/mwaqeet/', // GitHub Pages base path
     plugins: [
         react(),
@@ -18,8 +19,13 @@ export default defineConfig({
                 background_color: '#ffffff',
                 display: 'standalone',
                 orientation: 'portrait',
-                scope: '/',
-                start_url: '/',
+                
+                // 🛑 CRITICAL FIXES FOR GITHUB PAGES:
+                // Set the scope and start_url to the subdirectory
+                scope: '/mwaqeet/', 
+                start_url: '/mwaqeet/', 
+                // ----------------------------------------
+
                 icons: [
                     {
                         src: 'pwa-192x192.png',
