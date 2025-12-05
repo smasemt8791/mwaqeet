@@ -12,18 +12,18 @@ export default defineConfig({
             registerType: 'autoUpdate',
             includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
             manifest: {
-                name: 'Mawaqeet Navigator',
-                short_name: 'Mawaqeet',
-                description: 'Global Prayer Times & Qibla Compass',
+                name: 'مواقيت - Mawaqeet',
+                short_name: 'مواقيت',
+                description: 'أوقات الصلاة | Prayer Times Navigator',
                 theme_color: '#10b981',
                 background_color: '#ffffff',
                 display: 'standalone',
                 orientation: 'portrait',
-                
+
                 // 🛑 CRITICAL FIXES FOR GITHUB PAGES:
                 // Set the scope and start_url to the subdirectory
-                scope: '/mwaqeet/', 
-                start_url: '/mwaqeet/', 
+                scope: '/mwaqeet/',
+                start_url: '/mwaqeet/',
                 // ----------------------------------------
 
                 icons: [
