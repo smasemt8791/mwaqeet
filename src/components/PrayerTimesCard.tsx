@@ -21,12 +21,13 @@ export function PrayerTimesCard({ prayerTimes }: PrayerTimesCardProps) {
     const { dateFormat } = useSettings();
     const now = new Date();
 
-    // Gregorian date
+    // Gregorian date - explicitly set calendar to 'gregory' for Arabic to prevent Chrome/Edge from defaulting to Hijri
     const currentDate = now.toLocaleDateString(language === 'ar' ? 'ar-SA' : 'en-US', {
         weekday: 'long',
         year: 'numeric',
         month: 'long',
-        day: 'numeric'
+        day: 'numeric',
+        calendar: 'gregory'  // Force Gregorian calendar in all browsers
     });
 
     // Hijri date
